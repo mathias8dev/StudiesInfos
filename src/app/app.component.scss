@@ -117,3 +117,12 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+/* Customs stylisation */
+.menus-group {
+  margin: 20px 0;
+}
+
+.menus-group:first-child {
+  margin-bottom: 0;
+}

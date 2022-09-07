@@ -5,14 +5,35 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+
+  public appMenus = [
+    { title: 'Accueil', url: 'home', icon: 'home'},
+    { title: 'Paramètres', url: 'settings', icon: 'settings'},
   ];
+
+  public appGroupedMenus = [
+    {
+      name: 'Informations',
+      menus: [
+        { title: 'UL', url: '/infos/1', icon: 'paper-plane' },
+        { title: 'ENSI', url: '/infos/2', icon: 'school' },
+        { title: 'CIC', url: '/infos/3', icon: 'server' },
+        { title: 'ESA', url: '/infos/4', icon: 'school' },
+        { title: 'INSE', url: '/infos/5', icon: 'school' },
+      ]
+    },
+
+    {
+      name: 'Bourses',
+      menus: [
+        { title: 'Gouvernemental', url: '/scholarship/1', icon: 'paper-plane' },
+        { title: 'Continental', url: '/scholarship/2', icon: 'heart' },
+        { title: 'International', url: '/scholarship/3', icon: 'warning' },
+      ]
+    }
+  ];
+
+
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
